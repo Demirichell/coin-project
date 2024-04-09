@@ -30,7 +30,7 @@ const Home = ({ coinData }) => {
           </ul>
         </div>
         <div className="half">
-          MARKET SHARE TOP 10 CRYPTO COINS
+          MARKET SHARE TOP 10 CRYPTO COINS TESTING
           <Chart data={coinData} />
         </div>
       </div>
