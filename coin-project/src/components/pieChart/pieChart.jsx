@@ -12,10 +12,10 @@ const Chart = ({ data }) => {
           data: pieData || [],
           arcLabel: (item) => `${item.id}`,
           arcLabelMinAngle: 20,
-          outerRadius: 150,
+          outerRadius: 200,
         },
       ]}
-      height={600}
+      height={500}
     />
   );
 };

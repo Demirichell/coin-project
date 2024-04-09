@@ -1,16 +1,43 @@
+@import "./theme/theme.scss";
+
+
+
+
+.home{
+
 h1 {
-    font-size: 2rem;
+        font-size: 2rem;
+    }
+    
+
+
+}
+.half {
+    width: 50%;
+    justify-content: center;
+    display: flex;
+    margin: 4px, 4px;
+    padding: 4px;
+
 }
 
+.green {
+    color: #4caf50;
+}
+
+.red {
+    color: #f44336;
+}
 ul {
     list-style: none;
     margin: 0;
     padding: 0;
+    width:100%;
 }
 
 li {
-    background-color: #282b30;
-    border: 1px solid #ff0000;
+    background-color: $secondary;
+    border: 5px solid $primairy;
     border-radius: 4px;
     display: flex;
     justify-content: space-between;
@@ -33,10 +60,7 @@ button :hover{
     background-color: lightblue;
 }
 
-img {
-    height: 50px;
-    margin-right: 10px;
-}
+
 
 h2 {
     font-size: 1.5rem;
@@ -49,24 +73,8 @@ p {
     color:#9a9a9a;
 }
 
-.green {
-    color: #4caf50;
-}
 
-.red {
-    color: #f44336;
-}
 
-.half {
-    width: 50%;
-    justify-content: center;
-    display: flex;
-    margin: 4px, 4px;
-    padding: 4px;
-  
-
-   
-}
 .scroll-bar{
     overflow-x: hidden;
     overflow-y: auto;
@@ -85,5 +93,6 @@ p {
 }
 
 body{
-    background-color: #36393e;
+    background-color:$primairy;
 }
+

@@ -1,19 +1,53 @@
 import "../../App.jsx";
+import { useState, useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 
-const CryptoItem = ({ name, symbol, price, priceChange }) => {
+const CryptoItem = ({ name, symbol, price, priceChange, id }) => {
+  const [favorites, setFavorites] = useState(() => {
+    const saved = localStorage.getItem("favorites");
+    const initialValue = JSON.parse(saved);
+    return initialValue || [];
+  });
+
+  useEffect(() => {
+    // storing input name
+    localStorage.setItem("favorites", JSON.stringify(favorites));
+  }, [favorites]);
+
+  const nav = useNavigate();
+  function goto(id) {
+    nav(`/coins/${id}`);
+  }
+
   return (
-    <li>
-      <div>
-        <h2>{symbol}</h2>
-        <p>{name}</p>
-      </div>
-      <div className="right">
-        <p>{Math.round(price * 1000) / 1000}</p>
-        <p className={priceChange > 0 ? "green" : "red"}>
-          {Math.round(priceChange * 100) / 100}%
-        </p>
-      </div>
-    </li>
+    <div className="full">
+      <li>
+        <div onClick={() => goto(id)}>
+          <h2>{symbol}</h2>
+          <p>{name}</p>
+        </div>
+        <div onClick={() => goto(id)}>
+          <p>{Math.round(price * 1000) / 1000}</p>
+          <p className={priceChange > 0 ? "green" : "red"}>
+            {Math.round(priceChange * 100) / 100}%
+          </p>
+        </div>
+        <div>
+          <div
+            onClick={() =>
+              favorites.includes(id)
+                ? null
+                : localStorage.setItem(
+                    "favorites",
+                    JSON.stringify(favorites.concat([id]))
+                  )
+            }
+          >
+            fav
+          </div>
+        </div>
+      </li>
+    </div>
   );
 };
 export default CryptoItem;
