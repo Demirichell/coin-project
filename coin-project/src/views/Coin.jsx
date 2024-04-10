@@ -1,8 +1,7 @@
 import "../style.scss";
 import { useLocation } from "react-router-dom";
-import SearchBar from "../components/searchBar/searchBar";
+import SearchBar from "../components/searchBar/searchbar";
 import CryptoItem from "../components/cryptoItem/cryptoItem";
-import GetFav from "../components/getFavorites/getFavorites";
 
 const Home = ({ coinData }) => {
   const { pathname } = useLocation();
@@ -32,7 +31,6 @@ const Home = ({ coinData }) => {
       <div>
         <SearchBar data={coinData} />
         <div style={{ marginTop: 20 }}></div>
-        <GetFav />
       </div>
       <div className="Coin-card">
         <CryptoItem

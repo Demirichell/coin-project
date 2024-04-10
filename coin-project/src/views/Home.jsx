@@ -1,11 +1,10 @@
 import CryptoItem from "../components/cryptoItem/cryptoItem";
 import FooterCoin from "../components/footer/footercoin";
 import "../style.scss";
-import GetFav from "../components/getFavorites/getFavorites";
-
 import Chart from "../components/pieChart/pieChart";
 //import ColumnChart from "../components/columnChart/columnChart";
-import SearchBar from "../components/searchBar/searchBar";
+import SearchBar from "../components/searchBar/searchbar";
+import GetFav from "../components/getFavorites/getFavorites";
 
 const Home = ({ coinData }) => {
   return (
@@ -29,11 +28,10 @@ const Home = ({ coinData }) => {
           </ul>
         </div>
         <div className="half">
-          <h2> MARKET SHARE TOP 10 CRYPTO COINS TESTING</h2>
           <Chart data={coinData} />
-          <GetFav />
         </div>
       </div>
+      <GetFav />
       <FooterCoin />
     </div>
   );

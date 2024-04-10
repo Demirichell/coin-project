@@ -1,6 +1,37 @@
 @import "../../theme/theme.scss";
 
 footer{
+
     width: 100%;
     background-color: $secondary;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    border: 2px solid red;
+
+
+   p{
+    color: aliceblue;
+   }
+   h4{
+    font-size: 18px;
+    color: aliceblue;
+   }
+}
+.footer-layout {
+  
+    width: 33%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    height: fit-content;
+    border: 2px solid red;
+    color: aliceblue;
+
+
+}
+.text {
+ 
+    width: 100%;
+    border: 2px solid rgb(0, 234, 255);
 }

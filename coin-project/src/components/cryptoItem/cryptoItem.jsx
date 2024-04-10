@@ -19,6 +19,25 @@ const CryptoItem = ({ name, symbol, price, priceChange, id }) => {
     nav(`/coins/${id}`);
   }
 
+  // function removeFavorite(id) {
+  //   const updatedFavorites = favorites.filter((f) => f !== id);
+  //   localStorage.setItem(JSON.stringify(updatedFavorites));
+  //   setFavorites(updatedFavorites);
+  // }()
+
+  function toggleFavorite(id) {
+    const favorites = JSON.parse(localStorage.getItem("favorites"));
+    if (favorites.includes(id)) {
+      const updated = favorites.filter((f) => f !== id);
+      localStorage.setItem("favorites", JSON.stringify(updated));
+      setFavorites(updated);
+    } else {
+      const updated = favorites.concat([id]);
+      localStorage.setItem("favorites", JSON.stringify(updated));
+      setFavorites(updated);
+    }
+  }
+
   return (
     <div className="full">
       <li>
@@ -34,16 +53,10 @@ const CryptoItem = ({ name, symbol, price, priceChange, id }) => {
         </div>
         <div>
           <div
-            onClick={() =>
-              favorites.includes(id)
-                ? null
-                : localStorage.setItem(
-                    "favorites",
-                    JSON.stringify(favorites.concat([id]))
-                  )
-            }
+            className={favorites.includes(id) ? "red" : "white"}
+            onClick={() => toggleFavorite(id)}
           >
-            fav
+            &#10084;
           </div>
         </div>
       </li>

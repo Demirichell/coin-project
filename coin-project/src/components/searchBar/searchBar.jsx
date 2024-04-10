@@ -1,11 +1,13 @@
 import { ReactSearchAutocomplete } from "react-search-autocomplete";
 import { useNavigate } from "react-router-dom";
+import "../searchBar/searchbar.scss";
 
 const SearchBar = ({ data }) => {
   const nav = useNavigate();
 
   return (
-    <>
+    <div>
+      {" "}
       <ReactSearchAutocomplete
         onSelect={(item) => {
           nav(`/coins/${item.id}`);
@@ -17,7 +19,7 @@ const SearchBar = ({ data }) => {
         })}
       />
       <div style={{ marginTop: 20 }}></div>
-    </>
+    </div>
   );
 };
 
