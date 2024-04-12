@@ -7,6 +7,7 @@ const NavCoin = () => {
         {" "}
         <h1>Crypto Dashboard</h1>
       </div>
+
       <div className="nav-right">
         <button>login</button>
       </div>

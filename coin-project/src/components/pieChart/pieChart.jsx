@@ -17,7 +17,7 @@ const Chart = ({ data }) => {
           outerRadius: 200,
         },
       ]}
-      height={500}
+      height={400}
     />
   );
 };

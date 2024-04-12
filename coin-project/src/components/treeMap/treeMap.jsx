@@ -34,7 +34,7 @@ const TreemapChart = ({ data }) => {
     return () => {
       chart.destroy();
     };
-  }, [data]);
+  }, [chartData]);
 
   return <div id="chart"></div>;
 };

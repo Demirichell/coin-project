@@ -1,6 +1,5 @@
 import { ReactSearchAutocomplete } from "react-search-autocomplete";
 import { useNavigate } from "react-router-dom";
-import "../searchBar/searchbar.scss";
 
 const SearchBar = ({ data }) => {
   const nav = useNavigate();

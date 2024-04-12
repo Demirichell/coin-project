@@ -2,7 +2,6 @@ import CryptoItem from "../components/cryptoItem/cryptoItem";
 import FooterCoin from "../components/footer/footercoin";
 import "../style.scss";
 import Chart from "../components/pieChart/pieChart";
-//import ColumnChart from "../components/columnChart/columnChart";
 import SearchBar from "../components/searchBar/searchbar";
 import GetFav from "../components/getFavorites/getFavorites";
 import NavCoin from "../components/nav/nav";
