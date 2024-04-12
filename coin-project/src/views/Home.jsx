@@ -6,7 +6,7 @@ import Chart from "../components/pieChart/pieChart";
 import SearchBar from "../components/searchBar/searchbar";
 import GetFav from "../components/getFavorites/getFavorites";
 import NavCoin from "../components/nav/nav";
-//import TreemapChart from "../components/treeMap/treeMap";
+import TreemapChart from "../components/treeMap/treeMap";
 
 const Home = ({ coinData }) => {
   return (
@@ -30,8 +30,10 @@ const Home = ({ coinData }) => {
             ))}
           </ul>
         </div>
+
         <div className="half">
           <Chart data={coinData} />
+          <TreemapChart data={coinData} />
         </div>
       </div>
       <GetFav />

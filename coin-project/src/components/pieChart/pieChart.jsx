@@ -1,10 +1,12 @@
 import { PieChart } from "@mui/x-charts/PieChart";
 
 const Chart = ({ data }) => {
+  console.log(data);
   const pieData = data.slice(0, 10).map((crypto) => ({
     id: crypto.symbol,
     value: crypto.marketCapUsd,
   }));
+  console.log(pieData);
   return (
     <PieChart
       series={[

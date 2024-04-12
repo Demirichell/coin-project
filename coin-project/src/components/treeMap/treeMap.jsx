@@ -1,42 +1,42 @@
 import ApexCharts from "apexcharts";
+import { useEffect } from "react";
 
-import React, { useEffect, useRef } from "react";
-
-const TreemapChart = () => {
-  const treemapData = data.slice(0, 10).map((crypto) => ({
+const TreemapChart = ({ data }) => {
+  console.log(data);
+  const chartData = data.slice(0, 20).map((crypto) => ({
     x: crypto.symbol,
     y: crypto.marketCapUsd,
   }));
-   return (
-     <TreemapChart
-   series={[
-      {
-        data:  [
-          {
-            x: crypto.symbol,
-            y: crypto.marketCapUsd,
-         
-           
+  console.log(chartData);
+  useEffect(() => {
+    const options = {
+      series: [
+        {
+          data: chartData || [],
+        },
+      ],
+      legend: {
+        show: false,
       },
-    
-    ],
-    
-    legend: {
-      show: false,
-    },
-    chart: {
-      height: 350,
-      type: "treemap",
-    },
-    title: {
-      text: "Basic Treemap",
-    },
-  }]
+      chart: {
+        height: 350,
+        width: 600,
+        type: "treemap",
+      },
+    };
 
-  var chart = new ApexCharts(document.querySelector("#chart"), options);
-  chart.render();
-  />
-);
+    //console.log(data);
+
+    const chart = new ApexCharts(document.querySelector("#chart"), options);
+    chart.render();
+
+    // Cleanup function
+    return () => {
+      chart.destroy();
+    };
+  }, [data]);
+
+  return <div id="chart"></div>;
 };
 
 export default TreemapChart;
