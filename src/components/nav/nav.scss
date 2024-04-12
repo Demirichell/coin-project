@@ -1,0 +1,49 @@
+@import "../../theme/theme.scss";
+nav{
+    background-color: $secondary;
+    width: 100%;
+    height: 50px;
+    display: flex;
+    flex-direction: row;
+    padding-bottom: 10px;
+    
+  h1{
+   color: #6E6D70;;
+  }
+
+}
+.nav-right{
+    width: 50%;
+ 
+    display: flex;
+    justify-content: end;
+    padding: 10px;
+}
+.nav-left{
+    width: 50%;
+ 
+    display: flex;
+  align-items: center;
+}
+button{
+
+           width: 60px;
+           height: 30px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 6px 14px;
+            font-family: -apple-system, BlinkMacSystemFont, 'Roboto', sans-serif;
+            border-radius: 6px;
+            border: none;
+        
+            background: #6E6D70;
+            box-shadow: 0px 0.5px 1px rgba(0, 0, 0, 0.1), inset 0px 0.5px 0.5px rgba(255, 255, 255, 0.5), 0px 0px 0px 0.5px rgba(0, 0, 0, 0.12);
+            color: #DFDEDF;
+            user-select: none;
+            -webkit-user-select: none;
+            touch-action: manipulation;
+
+    
+       
+}
