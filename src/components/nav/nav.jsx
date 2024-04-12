@@ -1,4 +1,4 @@
-import "../nav/nav.scss";
+import "./nav.scss";
 
 const NavCoin = () => {
   return (
