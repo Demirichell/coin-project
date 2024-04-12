@@ -1,9 +1,9 @@
-##project
+## project
 Welcome to the Crypto Dashboard React app! This dashboard provides essential insights into the world of cryptocurrencies, helping you track prices, market trends, and more.
 
 
 
-##requirements
+## requirements
 -- Node.js: Ensure Node.js is installed on your machine. You can download it from [here](https://nodejs.org/).
 ## Installation
 
